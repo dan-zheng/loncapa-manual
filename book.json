@@ -1,0 +1,16 @@
+{
+	"gitbook": "3.*.*",
+	"title": "LON-CAPA Manual",
+	"structure": {
+		"summary": "SUMMARY.md"
+	},
+	"styles": {
+        "website": "./docs/assets/css/website.css"
+    },
+	"plugins": ["todo", "katex"],
+	"pluginsConfig": {
+        "theme-default": {
+            "showLevel": false
+        }
+    }
+}
