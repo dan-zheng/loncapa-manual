@@ -7,7 +7,7 @@ Perl has many built-in functions for manipulating various variables.
 
 Strings are commonly used scalar variables in Perl. They are important because many forms of data are stored as strings.
 
-#### Concatenate: `<string1>.<string2>` $$\Rightarrow$$ `<string>`
+#### Concatenation: `<string1>.<string2>` $$\Rightarrow$$ `<string>`
 
 Concatenation is the act of appending one string to the end of another. The string concatenation operator in Perl is `.` (dot).
 
@@ -27,18 +27,22 @@ $lastName = "Appleseed";
 $name = "$firstName $lastName";
 ```
 
-#### Multiply: `<string>x<integer>` $$\Rightarrow$$ `<string>`
+#### Repetition: `<string>x<integer>` $$\Rightarrow$$ `<string>`
+
+Repetition is the act of repeating a string multiple times. The string repetition operator in Perl is `x`: it repeats the `<string>` on its left side as many times as the `<integer>` on its right side.
 
 ```perl
 $clock = "tick tock "x3;
 # $clock = "tick tock tick tock tick tock "
 ```
 
-#### Trim: `trim(<string>)` $$\Rightarrow$$ `<string>`
-
 #### Substring: `substr(<string>)` $$\Rightarrow$$ `<string>`
 
+*in progress*
+
 #### Split: `split(<string>, <delimiter>)` $$\Rightarrow$$ `<array>`
+
+*in progress*
 
 ## Number functions
 
