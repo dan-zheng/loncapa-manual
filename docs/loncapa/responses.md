@@ -34,13 +34,13 @@ When answering formula response problems, students will see a yellow prompt that
 
 ![Formula Response Prompt](/docs/assets/img/formula-prompt.png)
 
-Similar to numerical responses, formula responses can also have a tolerance parameter. However, a tolerance may not be desirable for problems with non-numerical answers. Also, vanilla formula response is not suited for problems that specifically require simplified answers, as formula response accepts equivalent unsimplified answers. Such problems should either use a different response type, such as string response, or include a preprocessor subroutine that checks for simplified answers.
+Similar to numerical responses, formula responses can also have a tolerance parameter. However, a tolerance may not be desirable for problems with non-numerical answers. Also, vanilla formula response is not suited for problems that specifically require simplified answers as formula response accepts equivalent unsimplified answers. Such problems should either use a different response type, such as string response, or include a preprocessor subroutine that checks for simplified answers.
 
 ```xml
 <formularesponse answer="x^2+x+1" preprocess="stringcheck">
     <!-- No tolerance -->
     <!-- Answer line -->
-    <textline size="25" readonly="no" spellcheck="none" />
+    <textline readonly="no" spellcheck="none" />
 </formularesponse>
 ```
 
