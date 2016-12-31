@@ -28,7 +28,9 @@ This manual focuses on creating math problems using Perl scripting and the Maxim
 
 ## Contributors
 
-Author: [Dan Zheng](http://danzheng.me/).
+Author: [Dan Zheng](http://danzheng.me/contact/).
+
+If you are interested in contributing, you can [create a pull request](https://github.com/dan-zheng/loncapa-manual) or [contact me directly](mailto:zheng321@purdue.edu).
 
 ## License
 
