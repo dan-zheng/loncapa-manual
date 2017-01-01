@@ -1,0 +1,20 @@
+{
+  "name": "loncapa-manual",
+  "version": "1.0.0",
+  "description": "A manual for authoring in LON-CAPA.",
+  "scripts": {
+    "clean": "rimraf _book",
+    "build": "gitbook build",
+    "watch": "gitbook serve",
+    "publish": "npm run clean && npm run build && cd _book && git init && git commit --allow-empty -m 'Update book' && git checkout -b gh-pages && git add . && git commit -am 'Update book' && git push git@github.com:dan-zheng/loncapa-manual.git gh-pages --force"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dan-zheng/loncapa-manual.git"
+  },
+  "author": "Dan Zheng <zheng321@purdue.edu>",
+  "license": "MIT",
+  "devDependencies": {
+    "rimraf": "^2.4.3"
+  }
+}
