@@ -1,7 +1,7 @@
 LON-CAPA
 ========
 
-LON-CAPA is an open source web-based course management system created by Michigan State University. It helps to organize and present course websites, deliver and grade assignments, and manage student enrollment, assessment, and grading. (superscript)
+LON-CAPA is an open source web-based course management system created by Michigan State University. It helps to organize and present course websites, deliver and grade assignments, and manage student enrollment, assessment, and grading.
 
 Assignments in LON-CAPA are called problems. A problem consists of various resources, such as HTML for displaying text, CSS for styling the text, and Perl for adding functionality. This manual specifically focuses on creating resources for problems in LON-CAPA.
 
