@@ -18,7 +18,7 @@ This manual focuses on creating math problems using Perl scripting and the Maxim
     - [x] Loops
     - [x] Functions
     - [x] Subroutines
-    - [x] Regex
+    - [ ] Regex
 - Maxima
     - [ ] Evaluation
     - [ ] Simplification
