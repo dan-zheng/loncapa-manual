@@ -1,19 +1,47 @@
 Responses
 =============
 
-Problems in LON-CAPA can have different kinds of `responses`: some may be multiple-choice and others may be fill-in-the-blank.
+Problems in LON-CAPA can have different kinds of responses: some may be multiple-choice and others may be fill-in-the-blank.
 
-When creating a problem, using the correct `response` type is important. While different `response` types may be used to create the same problem, usually one type is most suited.
+When creating a problem, using the correct response type is important. While different response types may be used to create the same problem, usually one type is most suited.
 
-Note: `responses` are complex and have many features. This manual aims to explain the uses and basic features of each response type.
+Note: responses are complex and have many features. This manual aims to explain the uses and basic features of each response type.
+
+## Response Parameters
+
+Parameters are settings which control a specific response property, such as tolerance or maximum number of tries. Parameters are defined by a `name` attribute, which specifies the kind of parameter, a `type` attribute, which specifies the type of the parameter value, and a `default` attribute, which specifies the parameter value.
+
+Note that not all responses can use every parameter type: for example, string response problems cannot have a numerical tolerance.
+
+Below are some commonly used parameters.
+
+#### Tolerance
+
+Tolerance is a parameter that determines how close a student answer must be to the answer in order to be counted correct. Tolerance can be absolute (a specific numerical range) or relative (a percentage).
+
+```xml
+<responseparam name="tol" type="tolerance" description="Numerical Tolerance" default="<x>" />
+```
+
+#### Significant figures
+
+Significant figures is a parameter that indicates how many significant figures are required for the answer. The setting can be either a single integer or two comma-separated integers to specify a range. If this setting is used, it is important to inform students of the acceptable range of significant figures in the problem.
+
+```xml
+<responseparam name="sig" type="int_range" description="Significant Digits" default="<min>,<max>" />
+```
+
+#### Maximum number of tries
+
+```xml
+<responseparam name="maxtries" type="int_zeropos" description="Max # tries allowed" default="<x>" />
+```
+
+## Response Types
 
 ### Numerical Response
 
 `<numericalresponse>` is used for simple numerical answers: they are answered with a number and an optional unit. They can also have tolerance and significant figures parameters.
-
-Tolerance is an optional setting that determines how close a student answer must be to the answer in order to be counted correct. Tolerance can be absolute (a specific numerical range) or relative (a percentage).
-
-Significant figures is an optional setting that indicates how many significant figures are required for the answer. The setting can be either a single integer or two comma-separated integers to specify a range. If this setting is used, it is important to inform students of the acceptable range of significant figures.
 
 ```xml
 <numericalresponse answer="128" unit="kg">
@@ -38,7 +66,6 @@ Similar to numerical responses, formula responses can also have a tolerance para
 
 ```xml
 <formularesponse answer="x^2+x+1" preprocess="stringcheck">
-    <!-- No tolerance -->
     <!-- Answer line -->
     <textline readonly="no" spellcheck="none" />
 </formularesponse>
@@ -103,6 +130,35 @@ The `answerdisplay` attribute specifies the answer that is shown instead of the 
 </customresponse>
 ```
 
+## Radio Button Response
+
+`radiobuttonresponse` is used for multiple choice questions.
+
+The `direction` attribute controls the direction in which the `foils`, or answer options, are displayed: the `vertical` direction is almost always preferred over the `horizontal` one. The `randomize` attribute controls whether or not the ordering of the `foils` is randomized. The `max` attribute controls the maximum number of `foils` shown: this is relevant when there are many `foils` but only a few random ones should be displayed.
+
+Radio button responses require a `<foilgroup>`, which contains the `foils`.
+
+Each `<foil>` has a `location` attribute, which can be `top`, `bottom`, or `random`. The `value` of a foil determines whether or not it counts as a correct answer: `true` is correct and `false` is incorrect.
+
+```xml
+<radiobuttonresponse direction="vertical" max="10" randomize="yes">
+    <foilgroup>
+        <foil location="random" value="true" name="foil1">
+            <startouttext />Option 1<endouttext />
+        </foil>
+        <foil location="random" value="false" name="foil2">
+            <startouttext />Option 2<endouttext />
+        </foil>
+        <foil location="random" value="false" name="foil3">
+            <startouttext />Option 3<endouttext />
+        </foil>
+        <foil location="random" value="false" name="foil4">
+            <startouttext />Option 4<endouttext />
+        </foil>
+    </foilgroup>
+</radiobuttonresponse>
+```
+
 ## Preprocessor Subroutine
 
 Responses in LON-CAPA can specify a preprocessor subroutine using the `preprocess="<subroutine>"` attribute. Responses with this attribute pass their answers through the specified subroutine and the return value of the subroutine is used for final answer evaluation. Read the [Subroutines section](/docs/perl/subroutines.md) for more information about writing and using subroutines in Perl.
@@ -119,17 +175,16 @@ sub stringcheck {
     # Remove spaces
     $response =~ s/ //g;
     # Add star after digit or ')' followed by a variable or '('
-    $response =~ s/((\d|\))(?=([a-z]|\()))/$1\*/g;
-    # $response = &implicit_multiplication($response);
+    $response =~ s/((\d|\))(?=([x-z]|\()))/$1\*/g;
     # Return statement
     return $response;
 }
 ```
 
 ```xml
-<formularesponse answer="2*(x+y)*(x+z)" preprocess="stringcheck">
+<formularesponse answer="2*x*y*z" preprocess="stringcheck">
     <textline readonly="no" spellcheck="none" />
 </formularesponse>
 ```
 
-In the above example, an input of `2(x+z)(x+y)` will be processed into `2*(x+z)*(x+y)` by the `stringcheck` subroutine. The formula response will then recognize `2*(x+z)*(x+y)` as an acceptable answer.
+In the above example, an input of `2xzy` will be processed into `2*x*z*y` by the `stringcheck` subroutine. The formula response will then recognize `2*x*z*y` as an acceptable answer as it is equivalent to `2*x*y*z`.
