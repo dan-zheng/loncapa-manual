@@ -70,7 +70,7 @@ If the `length` parameter is omitted, `substr()` will return all characters star
 ```perl
 $a = 'I came, I saw, I conquered';
 $c = substr($a, 8); # start at index 7, copy all until end
-# $c = 'I saw I conquered'
+# $c = 'I saw, I conquered'
 ```
 
 If the `offset` is negative, `substr()` will start counting from the end of the string instead of the beginning.
