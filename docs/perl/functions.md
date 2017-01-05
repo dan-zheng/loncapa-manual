@@ -123,7 +123,7 @@ if (index(@possibleAns, $ans) != -1) {
 }
 ```
 
-#### Push and Unshift: `push|shift(@array, (<scalar>|@array))` $$\Rightarrow$$ `<size>`
+#### Push and Unshift: `push|unshift(@array, (<scalar>|@array))` $$\Rightarrow$$ `<size>`
 
 `push` adds a scalar variable or an array of scalar variables to the end of an array. `unshift` is similar to `push` but instead prepends the variable(s) to the front of an array.
 
@@ -139,7 +139,7 @@ push(@a, @b); # returns 7
 # @a = ('a', 'b', 'c', 1, 2, 'chicago', 'new york city')
 ```
 
-#### Pop and Shift: `pop|unshift(@array)` $$\Rightarrow$$ `<scalar>`
+#### Pop and Shift: `pop|shift(@array)` $$\Rightarrow$$ `<scalar>`
 
 `pop` removes the element at the end of an array and returns it. `shift` removes the element at the front of an array and returns it.
 
