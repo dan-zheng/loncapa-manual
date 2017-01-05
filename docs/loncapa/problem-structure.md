@@ -16,7 +16,7 @@ Attributes are tag modifiers: they have a `name` and a `value`. They follow this
 </tag>
 ```
 
-Attributes are critically important to many XML elements. For example, attributes specify the properties of `responses` in LON-CAPA problems. HTML elements also use attributes to specify display properties and resource paths (`src="<path-to-resource>"`).
+Attributes are critically important to many XML elements. For example, attributes specify the properties of `responses` in LON-CAPA problems. HTML elements also use attributes to specify display properties as well as resource paths (`src="<path-to-resource>"`).
 
 ## Common Tags
 
