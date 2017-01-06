@@ -140,6 +140,8 @@ Radio button responses require a `<foilgroup>`, which contains the `foils`.
 
 Each `<foil>` has a `location` attribute, which can be `top`, `bottom`, or `random`. The `value` of a foil determines whether or not it counts as a correct answer: `true` is correct and `false` is incorrect.
 
+*Note: In the case that `max` is less than the total number of `foils`, at least one of the displayed `foils` will have a value of `true`. This guarantees that at least one `foil` will count as a correct answer.*
+
 ```xml
 <radiobuttonresponse direction="vertical" max="10" randomize="yes">
     <foilgroup>
