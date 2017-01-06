@@ -1,0 +1,496 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Subroutines · LON-CAPA Manual</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../assets/css/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="regex.html" />
+    
+    
+    <link rel="prev" href="functions.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../loncapa/">
+            
+                <a href="../loncapa/">
+            
+                    
+                    LON-CAPA
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../loncapa/problem-structure.html">
+            
+                <a href="../loncapa/problem-structure.html">
+            
+                    
+                    Problem Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../loncapa/responses.html">
+            
+                <a href="../loncapa/responses.html">
+            
+                    
+                    Responses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../loncapa/html-css.html">
+            
+                <a href="../loncapa/html-css.html">
+            
+                    
+                    HTML/CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../loncapa/latex.html">
+            
+                <a href="../loncapa/latex.html">
+            
+                    
+                    LaTeX
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Perl
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="variables.html">
+            
+                <a href="variables.html">
+            
+                    
+                    Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="conditions.html">
+            
+                <a href="conditions.html">
+            
+                    
+                    Conditions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="loops.html">
+            
+                <a href="loops.html">
+            
+                    
+                    Loops
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.5" data-path="subroutines.html">
+            
+                <a href="subroutines.html">
+            
+                    
+                    Subroutines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="regex.html">
+            
+                <a href="regex.html">
+            
+                    
+                    Regular Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../maxima/">
+            
+                <a href="../maxima/">
+            
+                    
+                    Maxima
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../maxima/simplification.html">
+            
+                <a href="../maxima/simplification.html">
+            
+                    
+                    Simplification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../glossary.md">
+            
+                <span>
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Subroutines</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="subroutines">Subroutines</h1>
+<p>In Perl, user-defined functions are called subroutines. They may be located in any Perl code block.</p>
+<p>The Perl model for function call and return values is simple: all functions are passed as parameters one single flat list of scalars, and all functions likewise return to their caller one single flat list of scalars.</p>
+<p>All parameters passed to a subroutine show up in the special array <code>@_</code>. The first parameter can be accessed with <code>$_[0]</code>, the second with <code>$_[1]</code>, and so on.</p>
+<p><code>return</code> statements are used to exit subroutines. They may optionally specify a return value.</p>
+<p>Subroutines are declared using the keyword <code>sub</code>. Subroutines may be called using an explicit <code>&amp;</code> prefix.</p>
+<pre><code class="lang-perl"><span class="hljs-function"><span class="hljs-keyword">sub</span> <span class="hljs-title">hello</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;Hello&apos;</span>;
+}
+$a = &amp;hello();
+<span class="hljs-comment"># $a = &apos;Hello&apos;</span>
+</code></pre>
+<pre><code class="lang-perl"><span class="hljs-function"><span class="hljs-keyword">sub</span> <span class="hljs-title">max</span> </span>{
+    <span class="hljs-keyword">my</span> ($max) = <span class="hljs-keyword">shift</span>(@_);
+    <span class="hljs-keyword">foreach</span> $temp (@_) {
+        $max = $temp <span class="hljs-keyword">if</span> $max &lt; $temp;
+    }
+    <span class="hljs-keyword">return</span> $max;
+}
+$b = max(<span class="hljs-number">6</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">8</span>);
+<span class="hljs-comment"># $b = 8</span>
+</code></pre>
+<h2 id="lon-capa-subroutines">LON-CAPA Subroutines</h2>
+<p>LON-CAPA includes some useful custom Perl subroutines that can be called in any problem. These are not part of the Perl standard library so they work only within LON-CAPA.</p>
+<h3 id="math-operations">Math Operations</h3>
+<h4 id="trigonometric-sinx-cosx-tanx">Trigonometric: <code>&amp;sin(&lt;x&gt;), &amp;cos(&lt;x&gt;), &amp;tan(&lt;x&gt;)</code></h4>
+<p>Trigonometric functions where <code>&lt;x&gt;</code> is a value in radians.</p>
+<h4 id="inverse-trigonometric-asinx-acosx-atanx-atan2signx">Inverse Trigonometric: <code>&amp;asin(&lt;x&gt;), &amp;acos(&lt;x&gt;), &amp;atan(&lt;x&gt;), &amp;atan2(&lt;sign&gt;,&lt;x&gt;)</code></h4>
+<p>Inverse trigonometric functions where the return value is in radians.</p>
+<p>The input for <code>&amp;asin</code> and <code>&amp;acos</code> must be between <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2212;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">&#x2212;</span><span class="mord mathrm">1</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span></span></span></span>.</p>
+<p><code>&amp;atan2</code> returns a value between <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2212;</mo><mi>&#x3C0;</mi></mrow><annotation encoding="application/x-tex">-\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.58333em;"></span><span class="strut bottom" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord">&#x2212;</span><span class="mord mathit" style="margin-right:0.03588em;">&#x3C0;</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3C0;</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">&#x3C0;</span></span></span></span>, the sign of which is determined by <code>&lt;sign&gt;</code>.</p>
+<h4 id="logarithmic-logx-log10x">Logarithmic: <code>&amp;log(&lt;x&gt;), &amp;log10(&lt;x&gt;)</code></h4>
+<p>Natural <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>ln</mi><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(\ln x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mop">ln</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span> and base-10 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>log</mi><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(\log x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span> logarithms.</p>
+<h4 id="exponential-expx-powxy-sqrtx">Exponential: <code>&amp;exp(&lt;x&gt;), &amp;pow(&lt;x&gt;,&lt;y&gt;), &amp;sqrt(&lt;x&gt;)</code></h4>
+<p>Exponential <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>x</mi></mrow></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">(e^{x})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord"><span class="mord mathit">e</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathit">x</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose">)</span></span></span></span>, power <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><msup><mi>x</mi><mi>y</mi></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">(x^y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose">)</span></span></span></span>, and square root <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><msqrt><mrow><mi>x</mi></mrow></msqrt><mo>)</mo></mrow><annotation encoding="application/x-tex">(\sqrt{x})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8002800000000001em;"></span><span class="strut bottom" style="height:1.05028em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="sqrt mord"><span class="sqrt-sign" style="top:0.03971999999999998em;"><span class="style-wrap reset-textstyle textstyle uncramped">&#x221A;</span></span><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">x</span></span></span><span style="top:-0.72028em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped sqrt-line"></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose">)</span></span></span></span> functions.</p>
+<h3 id="number-related">Number-related</h3>
+<h4 id="random-number-range-randomlow-high-step">Random number (range): <code>&amp;random(&lt;low&gt;, &lt;high&gt;, &lt;step&gt;)</code></h4>
+<p>Returns a uniformly distributed random number between the <code>&lt;low&gt;</code> and <code>&lt;high&gt;</code> bounds, in steps of size <code>&lt;step&gt;</code>. <code>&lt;step&gt;</code> is optional. If omitted, a step of 1 is used.</p>
+<pre><code class="lang-perl">$a = &amp;random(-<span class="hljs-number">3</span>, <span class="hljs-number">3</span>);
+$b = &amp;random(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>.<span class="hljs-number">5</span>);
+<span class="hljs-comment"># Possible values:</span>
+<span class="hljs-comment"># $a: -3, -2, -1, 0, 1, 2, 3</span>
+<span class="hljs-comment"># $b: 0, 0.5, 1, 1.5, 2</span>
+</code></pre>
+<h4 id="round-roundtonum-decimal-points">Round: <code>&amp;roundto(&lt;num&gt;, &lt;decimal points&gt;)</code></h4>
+<p>Rounds a real number to a given number of decimal points.</p>
+<pre><code class="lang-perl">$a = <span class="hljs-number">3.1415926</span>;
+$b = &amp;roundto($a, <span class="hljs-number">2</span>); <span class="hljs-comment"># 3.14</span>
+$c = &amp;roundto($a, <span class="hljs-number">5</span>); <span class="hljs-comment"># 3.14159</span>
+</code></pre>
+<h4 id="minimum-and-maximum-minarraylist-maxarraylist">Minimum and maximum: <code>&amp;min(&lt;@array&gt;|&lt;list&gt;)</code> <code>&amp;max(&lt;@array&gt;|&lt;list&gt;)</code></h4>
+<p>Returns the minimum or maximum value in an array or list of scalar variables.</p>
+<pre><code class="lang-perl">@ages = (<span class="hljs-number">70</span>, <span class="hljs-number">21</span>, <span class="hljs-number">18</span>, <span class="hljs-number">5</span>, <span class="hljs-number">35</span>, <span class="hljs-number">62</span>);
+<span class="hljs-comment"># List, $min = 5</span>
+$min = &amp;min(<span class="hljs-number">70</span>, <span class="hljs-number">21</span>, <span class="hljs-number">18</span>, <span class="hljs-number">5</span>, <span class="hljs-number">35</span>, <span class="hljs-number">62</span>);
+<span class="hljs-comment"># Array, $max = 70</span>
+$max = &amp;max(@ages);
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="functions.html" class="navigation navigation-prev " aria-label="Previous page: Functions">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="regex.html" class="navigation navigation-next " aria-label="Next page: Regular Expressions">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Subroutines","level":"1.3.5","depth":2,"next":{"title":"Regular Expressions","level":"1.3.6","depth":2,"path":"docs/perl/regex.md","ref":"docs/perl/regex.md","articles":[]},"previous":{"title":"Functions","level":"1.3.4","depth":2,"path":"docs/perl/functions.md","ref":"docs/perl/functions.md","articles":[]},"dir":"ltr"},"config":{"plugins":["todo","katex"],"styles":{"website":"./docs/assets/css/website.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"todo":{},"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LON-CAPA Manual","gitbook":"3.*.*"},"file":{"path":"docs/perl/subroutines.md","mtime":"2017-01-05T18:56:24.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-06T00:44:31.212Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
